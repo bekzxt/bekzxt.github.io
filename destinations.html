@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #filter-input {
+      padding: 10px;
+      width: 200px;
+      margin-right: 10px;
+      margin-left: 20px;
+    }
+
+    #filter-button {
+      padding: 10px;
+    }
+
+    #image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    #image-gallery img {
+      margin: 10px;
+      width: 220px;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+
+    #image-gallery img:hover {
+      transform: scale(1.2);
+    }
+
+    .navbar {
+      background-color: #f8f9fa;
+    }
+
+    .nav-link {
+      color: #9f8e41;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #0056b3;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .image-container {
+      margin-top: 20px;
+    }
+
+    body.day-theme {
+      background-color: white;
+      color: black;
+    }
+    body.night-theme {
+      background-color: #2c3e50;
+      color: white;
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+
+ <div class = "container-fluid">
+   <header class="mb-4">
+     <h3 class="text-center">Welcome to the Ultimate Travel Guide</h3>
+     <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+       <div class = container-fluid>
+         <a class="navbar-brand" href="#">Travel Guide</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <span class="navbar-toggler-icon"></span>
+         <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav">
+             <li class="nav-item ms-3">
+               <a class="nav-link" href="practice.html">Home</a>
+             </li>
+             <li class="nav-item ms-3">
+               <a class="nav-link" href="#destinations.html">Destinations</a>
+             </li>
+             <li class="nav-item ms-3">
+               <a class="nav-link" href="practice.html#reviews">Reviews</a>
+             </li>
+           </ul>
+
+         </div>
+       </div>
+     </nav>
+   </header>
+
+ </div>
+
+<main>
+
+  <section id="paris" class="container-fluid">
+    <div class = "row">
+     <h2 class = "ms-3">Paris</h2>
+      <div class="col-lg-3">
+     <figure>
+       <img src="https://a.eu.mktgcdn.com/f/100004519/N2BB4ohwclor2uLoZ7XMHgJmxOZaMOokMdQqqXQAq3s.jpg" alt="Paris" width="350">
+       <figcaption>Iconic view of Paris</figcaption>
+     </figure>
+      </div>
+      <div class="col-lg-9">
+       <p>Paris is filled with fascinating places, but here are three standout spots you might find particularly interesting:</p>
+       <ul>
+         <li><strong>Notre-Dame Cathedral</strong>: Although it was severely damaged by a fire in 2019, Notre-Dame remains an iconic symbol of Paris. Its Gothic architecture, including its flying buttresses, rose windows, and gargoyles, make it a fascinating site. You can explore the surrounding Île de la Cité and the Seine River, which add to the charm of this historic area.</li>
+         <li><strong>The Louvre Museum</strong>: Home to thousands of works of art, including the Mona Lisa and the Venus de Milo, the Louvre is not only a treasure trove of masterpieces but also a stunning architectural marvel. Its vast collection spans thousands of years and various cultures, making it a must-visit for art and history enthusiasts.</li>
+         <li><strong>Montmartre and the Basilica of the Sacré-Cœur</strong>: Montmartre is a historic district known for its artistic heritage, charming streets, and vibrant atmosphere. The Basilica of the Sacré-Cœur, perched on the highest point in the city, offers breathtaking panoramic views of Paris. The area is also famous for its bohemian past, with connections to artists like Picasso and Van Gogh.</li>
+       </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tokyo" class="container-fluid">
+    <div class="row">
+      <h2 class="ms-2">Tokyo</h2>
+      <div class="col-lg-3">
+        <figure>
+          <img src="https://plus.unsplash.com/premium_photo-1661914240950-b0124f20a5c1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9reW8lMjBza3lsaW5lfGVufDB8fDB8fHww" alt="Tokyo" width="350">
+          <figcaption>The bustling cityscape of Tokyo</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-9">
+        <p>Tokyo, the capital city of Japan, is known for its modernity, technology, and culture. Here are three must-see places:</p>
+        <ul>
+          <li><strong>The Tokyo Tower</strong>: Inspired by the Eiffel Tower, the Tokyo Tower offers panoramic views of the city. Its bright orange and white color scheme makes it a striking addition to the skyline, and it’s especially beautiful when illuminated at night.</li>
+          <li><strong>The Meiji Shrine</strong>: Located in a forested area, this Shinto shrine is dedicated to Emperor Meiji and Empress Shoken. It provides a peaceful escape from the bustling city and is surrounded by beautiful gardens, perfect for a tranquil stroll.</li>
+          <li><strong>Shibuya Crossing</strong>: One of the busiest pedestrian crossings in the world, Shibuya Crossing is a symbol of Tokyo's vibrant urban life. The area is filled with shops, restaurants, and entertainment options, making it a must-visit destination.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="new-york" class="container-fluid">
+    <div class="row">
+      <h2 class="ms-2">New York</h2>
+      <div class="col-lg-3">
+        <figure>
+          <img src="https://images.squarespace-cdn.com/content/v1/62015f66f840ef671da14ae7/4161edfa-ebba-4c13-90a4-90383f26260e/Photographing-NYC-skyline.jpg" alt="New York City" width="350">
+          <figcaption>The iconic skyline of New York City</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-9">
+        <p>New York City, also known as the "city that never sleeps," is famous for its diversity and landmarks. Here are three top attractions:</p>
+        <ul>
+          <li><strong>Statue of Liberty</strong>: A symbol of freedom and democracy, the Statue of Liberty is located on Liberty Island and offers stunning views of New York Harbor. Visitors can take a ferry to the island and explore the museum inside the statue.</li>
+          <li><strong>Central Park</strong>: An expansive green space in the heart of Manhattan, Central Park provides a serene escape with walking paths, lakes, and cultural attractions such as the Central Park Zoo and the Bethesda Terrace.</li>
+          <li><strong>Times Square</strong>: Known for its bright lights and bustling atmosphere, Times Square is a major commercial and entertainment hub with theaters, shops, and restaurants. It’s especially lively on New Year’s Eve, when the iconic ball drop occurs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="destinationCarousel" class="carousel slide container mb-5 mt-2 300-px-wide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.britannica.com/31/255531-050-B7E07090/eiffel-tower-paris-france-champ-de-mars-view.jpg" class="d-block w-60" alt="Paris">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to Paris</h5>
+          <p>Experience the charm and beauty of the City of Lights.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.hilton.com/im/en/NoHotel/19361896/shutterstock-667925704.jpg?impolicy=crop&cw=3800&ch=2533&gravity=NorthWest&xposition=0&yposition=1&rw=1280&rh=856" class="d-block w-60" alt="Tokyo">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Discover Tokyo</h5>
+          <p>Immerse yourself in the vibrant culture and technology of Japan.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://cms.finnair.com/resource/blob/497050/9c27b858c9241ccc69ab7a418eb92d65/new-york-shopping-data.jpg?impolicy=crop&width=1697&height=955&x=0&y=88" class="d-block w-60" alt="New York City">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Experience New York</h5>
+          <p>The city that never sleeps awaits your exploration.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <h1 class="text-center mt-5">Image Gallery</h1>
+
+  <input type="text" id="filter-input" placeholder="Search for images...">
+  <button id="filter-button">Filter</button>
+
+  <div id="image-gallery">
+    <img src="https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/16:9/w_4288,h_2412,c_limit/BlackForest-Germany-GettyImages-147180370.jpg" alt="Image 1" data-keywords="nature, forest">
+    <img src="https://images.stockcake.com/public/8/2/4/824db9fe-eccf-44bf-91b3-7e1c2bb17db6_large/sunset-city-skyline-stockcake.jpg" alt="Image 2" data-keywords="city, skyline">
+    <img src="https://as2.ftcdn.net/v2/jpg/01/01/63/65/1000_F_101636567_rXDznIGyOWKtBSFxtFWz8wzdANuAktpS.jpg" alt="Image 3" data-keywords="ocean, beach">
+    <img src="https://images.pexels.com/photos/140234/pexels-photo-140234.jpeg?cs=srgb&dl=pexels-sandy-140234.jpg&fm=jpg" alt="Image 4" data-keywords="mountain, snow">
+    <img src="https://cdn-ikppcfn.nitrocdn.com/jqtVDbjdfBPrQSiPhMihAdYLibcqMkkx/assets/images/optimized/rev-4c3905d/sevennaturalwonders.org/wp-content/uploads/2023/11/Sahara-Desert-sunset.jpg" alt="Image 5" data-keywords="desert, sand">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTBm_dPmiAkzt2domDmI4CIBqptNwV_ptsHg&s" alt="Image 6" data-keywords="animals, wildlife">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLEHswHVyxjQ-muQA6Te6teY_DxAw-cOm-gA&s" alt="Image 7" data-keywords="nature, mountain">
+    <img src="https://www.digi.com/getattachment/Blog/post/Smart-Cities-in-the-US-Examples/GettyImages-1153849876-NewYork-1280x720.jpg?lang=en-US" alt="Image 8" data-keywords="city, skylines">
+  </div>
+
+
+
+  <div class="container text-center mt-5">
+    <h1>Random Image Display</h1>
+    <button id="fetch-image">Show Random Image</button>
+    <div id="imageContainer" class="image-container"></div>
+    <audio id="clickSound" src="mouse.mp3"></audio>
+  </div>
+
+
+
+
+  <div class ="text-center mt-5" id="dateTime"></div>
+
+  </main>
+
+   <footer class="text-center mt-5 bc">
+      <p>Created by Amirov Bekzat, 2024. All rights reserved.</p>
+    </footer>
+<script src="destinations-js.js"></script>
+</body>
+</html>
