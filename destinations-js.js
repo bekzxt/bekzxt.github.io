@@ -46,25 +46,22 @@ document.getElementById('fetch-image').addEventListener('click', () => {
     .catch(error => console.error('Error fetching the random image:', error));
 });
 
-const themeToggle = document.getElementById('themeToggle');
+
 const body = document.body;
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme) {
   body.classList.add(savedTheme);
-  themeToggle.textContent = savedTheme === 'night-theme' ? 'Switch to Day Mode' : 'Switch to Night Mode';
+
 } else {
   body.classList.add('day-theme');
-  themeToggle.textContent = 'Switch to Night Mode';
+
 }
-
-
 
 
 const filterInput = document.getElementById('filter-input');
 const filterButton = document.getElementById('filter-button');
 const imageGallery = document.getElementById('image-gallery');
-
 function filterImages() {
   const filterText = filterInput.value.toLowerCase();
   const images = imageGallery.getElementsByTagName('img');
@@ -80,7 +77,6 @@ function filterImages() {
 }
 
 filterButton.addEventListener('click', filterImages);
-
 filterInput.addEventListener('keypress', function(event) {
   if (event.key === 'Enter') {
     filterImages();
