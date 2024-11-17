@@ -1,5 +1,7 @@
 document.getElementById('contactForm').addEventListener('submit', function (e ){
 
+
+
     let isValid = true;
     const name = document.getElementById('name').value;
     if(name === ''){
@@ -141,10 +143,6 @@ document.getElementById("changeColor").addEventListener('click', () => {
 const colors = ['#FF5733', '#33FF57', '#3357FF', '#F0F033', '#33FFF0', '#FF33F0'];
 let currentColorIndex = 0;
 
-document.getElementById("randomb").addEventListener('click', () => {
-    alert("hello");
-});
-
 document.addEventListener('keydown', (event) => {
 
   if (event.key === 'ArrowRight') {
@@ -161,26 +159,40 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-function login() {
-  const username = prompt("Enter your username:");
-  if (username) {
-    localStorage.setItem('username', username);
-    displayUser();
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("hii");
+  const welcomeMessage = document.getElementById("welcomeMessage");
+  const logoutBtn = document.getElementById("logoutBtn");
+  const loginBtn = document.getElementById("loginBtn");
+  const signupBtn = document.getElementById("signupBtn");
+
+
+  if (localStorage.getItem("isLoggedIn") === "true") {
+    const username = localStorage.getItem("username");
+    welcomeMessage.innerText = `Welcome back, ${username}!`;
+    logoutBtn.classList.remove("d-none");
+    loginBtn.classList.add("d-none");
+    signupBtn.classList.add("d-none");
+  } else {
+    loginBtn.classList.remove("d-none");
+    signupBtn.classList.remove("d-none");
   }
-}
 
-function logout() {
-  localStorage.removeItem('username');
-  displayUser();
-}
 
-function displayUser() {
-  const username = localStorage.getItem('username');
-  const userSection = document.getElementById('userSection');
-  userSection.innerHTML = username ? `Hello, ${username} <button onclick="logout()" class="btn btn-danger">Logout</button>` : `<button onclick="login()" class="btn btn-success">Login</button>`;
-}
+  logoutBtn.addEventListener("click", () => {
+    localStorage.setItem("isLoggedIn", "false");
+    location.reload();
+  });
 
-displayUser();
+
+  loginBtn.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+
+  signupBtn.addEventListener("click", () => {
+    window.location.href = "signup.html";
+  });
+});
 
 
 

@@ -82,3 +82,9 @@ filterInput.addEventListener('keypress', function(event) {
     filterImages();
   }
 });
+
+if(localStorage.getItem("isLoggedIn") === "true"){
+   const username = localStorage.getItem("username");
+   const welcomeMessage = document.getElementById("destinationText");
+   welcomeMessage.innerText =  `Welcome to the Ultimate Travel Guide, ${username}!`;
+}
