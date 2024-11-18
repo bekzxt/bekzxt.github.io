@@ -55,22 +55,6 @@ document.getElementById("closeBtn").addEventListener("click", function() {
 });
 
 
-const stars = document.querySelectorAll('.star');
-const ratingMessage = document.getElementById('ratingMessage');
-
-stars.forEach(star => {
-  star.addEventListener('click', () => {
-    let rating = star.getAttribute('data-value');
-
-    stars.forEach(s => s.classList.remove('selected'));
-
-    for (let i = 0; i < rating; i++) {
-      stars[i].classList.add('selected');
-    }
-
-    ratingMessage.textContent = `You rated this destination: ${rating} stars!`;
-  });
-});
 
 function displayGreeting() {
   const currentHour = new Date().getHours();

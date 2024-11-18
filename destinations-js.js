@@ -58,6 +58,27 @@ if (savedTheme) {
 
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  const ratingContainers = document.querySelectorAll(".rating");
+
+  ratingContainers.forEach((container) => {
+
+    const stars = container.querySelectorAll(".star");
+
+    stars.forEach((star) => {
+      star.addEventListener("click", function () {
+
+        stars.forEach((s) => s.classList.remove("selected"));
+        const rating = parseInt(star.dataset.value);
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add("selected");
+        }
+
+      });
+    });
+  });
+});
 
 const filterInput = document.getElementById('filter-input');
 const filterButton = document.getElementById('filter-button');
